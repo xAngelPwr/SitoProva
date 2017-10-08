@@ -1,0 +1,225 @@
+---
+layout: page
+title: Clienti
+permalink: /clienti/
+---
+
+<!-- Slider Start -->
+
+<section id="service">
+              <div class="spazdivcontclienti">
+                <p><h1>I nostri clienti la nostra forza</h1></p>
+              </div>
+              <div class="ombradivclienti" align="center">
+                <img src="../img/clienti1.png" class="immagineclienti">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Portfolio Start -->
+<section id="portfolio-work">
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+                <li class="filter">Tutto</li>
+                <li class="filter">Comuni</li>
+                <li class="filter">Unioni e gestioni associate</li>
+                <li class="filter">Camere di commercio</li>
+                <li class="filter">Sanità</li>
+                <li class="filter">Agenzie regionali</li>
+                <li class="filter">Pac</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+<script type="text/javascript">
+
+
+
+function tutto(){
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var boh = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
+
+}
+
+ //Descrizione breve del progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quarto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2 = document.createElement("div");
+       collg5lgoffset2.className="col-lg-5 col-lg-offset-2 col-sm-6";
+       collg5lgoffset2.appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6 = document.createElement("div");
+       collg5sm6.className="col-lg-5 col-sm-6";
+       collg5sm6.appendChild(divarray);
+       collg5sm6.appendChild(clearfix);
+       collg5sm6.appendChild(divsectionheading);
+       collg5sm6.appendChild(lead);
+       collg5sm6.appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6);
+       row.appendChild(collg5lgoffset2);
+
+       container = document.createElement("div");
+       container.className="container";
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       boh = document.getElementById("services");
+       boh.appendChild(contentsection[k]);
+
+}
+}
+
+function comuni(){
+
+
+}
+
+function unegestass(){
+
+
+}
+
+function camdicomm(){
+
+
+}
+
+function sanità(){
+
+
+}
+
+function agenzreg(){
+
+
+}
+
+function pac(){
+
+
+}
+</script>
+
+<section id="services">
+    <!-- Page Content -->
+
+
+            <div class="content-section-a">
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-5 col-sm-6">
+                          <div>
+                            <hr class="section-heading-spacer">
+                          </div>
+                            <div class="clearfix"></div>
+                            <div>
+                            <h2 class="section-heading">Analisi e orientamento</h2></div>
+                             <div class="lead"><p>La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business.
+                                                  ramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.</p>
+                             </div>
+                             <div>
+                             <button class="bottoneclienti" type="submit">Scopri di più</button>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                            <img  class="img-responsive" src="../img/wrapper-img.png" alt="" class="bordo">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /.content-section-a -->
+
+
+
+
+
+
+
+
+        <button onclick="tutto()"></button>
+    </section>

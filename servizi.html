@@ -1,0 +1,286 @@
+---
+layout: page
+title: Servizi
+permalink: /servizi/
+---
+
+    <!-- Slider Start -->
+
+<section id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1 class="titoloservizi">Servizi</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="divweb">
+ <p class="paragrafiservizi"><b>Web</b></p>
+ <b><p id="marginepweb">Mostra di più</p></b>
+
+<a id="linkancoraweb" href="#ancoraweb"><img src="../img/freccia.svg" class="bouncefrecciaweb" id="bouncefrecciawebcapovolta" onclick="frecciaweb()"></a>
+<b><p id="scoprdimenoweb"></p></b>
+</div>
+
+
+ <div id="divapplicazioni">
+  <p class="paragrafiservizi"><b>Applicazioni</b></p>
+  <b><p id="marginepapp">Mostra di più</p></b>
+
+   <a id="linkancoraapp" href="#ancoraapp"><img src="../img/freccia.svg" class="bouncefrecciaapp" id="bouncefrecciaappcapovolta" onclick="frecciaapp()"></a>
+
+  <b><p id="scoprdimenoapp"></p></b>
+ </div>
+
+
+ <div id="divintranet">
+  <p class="paragrafiservizi"><b>Intranet</b></p>
+  <b><p id="marginepintr">Mostra di più</p></b>
+   <a id="linkancoraintr" href="#ancoraintr"><img src="../img/freccia.svg" class="bouncefrecciaintr" id="bouncefrecciaintrcapovolta" onclick="frecciaintr()"></a>
+   <b><p id="scoprdimenointr"></p></b>
+ </div>
+<!-- Call to action Start -->
+
+<script type="text/javascript">
+
+var cont = 0;
+var cont1 = 0;
+var cont2 = 0;
+var resto;
+var resto1;
+var resto2;
+var restoweb;
+var restoapp;
+var restointr;
+var contweb = 0;
+var contapp = 0;
+var contintr = 0;
+
+  $(document).ready(function()
+  {$("#back_to_top").hide();
+  });
+
+function frecciaweb(){
+
+  resto = cont%2;
+  if(resto==0){
+
+  document.getElementById("divweb").style.height="2000px";
+  document.getElementById("bouncefrecciawebcapovolta").style.transform="rotate(180deg)";
+  document.getElementById("bouncefrecciawebcapovolta").style.width="5%";
+  document.getElementById("bouncefrecciawebcapovolta").style.height="5%";
+  document.getElementById("bouncefrecciawebcapovolta").style.marginTop="1670px";
+  document.getElementById("marginepweb").innerHTML="";
+  document.getElementById("scoprdimenoweb").innerHTML="Mostra di meno";
+  document.getElementById("divweb").style.opacity="1";
+
+var $nuovo = jQuery.noConflict();
+$nuovo(document).ready(function()
+  {
+      // Nascondo l'icona al caricamento della pagina
+      $("#back_to_top").hide();
+
+      // Intercetto lo scroll di pagina
+      $(window).scroll(function()
+      {
+        if ($(document).scrollTop() > 600){
+          // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
+          if ($("#back_to_top").is(":hidden")) {
+              $("#back_to_top").fadeIn(500);
+          }
+   }
+          // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
+          if ($(document).scrollTop() < 600){
+           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
+           {
+               $("#back_to_top").fadeOut(500);
+           }
+           }
+      });
+
+      // Al click sull'icona, torno ad inizio pagina con movenza fluida
+      $("#back_to_top").click(function()
+      {
+          $("html,body").animate({scrollTop: 0}, 500, function(){});
+
+      });
+  });
+
+}
+
+if(resto!=0){
+
+document.getElementById("divweb").style.height="300px";
+document.getElementById("bouncefrecciawebcapovolta").style.transform="rotate(360deg)";
+document.getElementById("bouncefrecciawebcapovolta").style.width="20%";
+document.getElementById("bouncefrecciawebcapovolta").style.height="20%";
+document.getElementById("bouncefrecciawebcapovolta").style.marginTop="0px";
+document.getElementById("scoprdimenoweb").innerHTML="";
+document.getElementById("marginepweb").innerHTML="Mostra di più";
+document.getElementById("divweb").style.opacity="0.8";
+
+$(document).ready(function()
+{$("#back_to_top").hide();
+});
+}
+cont++;
+
+
+}
+
+
+
+
+function frecciaapp(){
+
+  resto1= cont1%2;
+  if(resto1==0){
+
+  document.getElementById("divapplicazioni").style.height="2000px";
+  document.getElementById("bouncefrecciaappcapovolta").style.transform="rotate(180deg)";
+  document.getElementById("bouncefrecciaappcapovolta").style.width="5%";
+  document.getElementById("bouncefrecciaappcapovolta").style.height="5%";
+  document.getElementById("bouncefrecciaappcapovolta").style.marginTop="1670px";
+  document.getElementById("marginepapp").innerHTML="";
+  document.getElementById("scoprdimenoapp").innerHTML="Mostra di meno";
+  document.getElementById("divapplicazioni").style.opacity="1";
+
+var $nuovo1 = jQuery.noConflict();
+$nuovo1(document).ready(function()
+  {
+      // Nascondo l'icona al caricamento della pagina
+      $("#back_to_top").hide();
+
+      // Intercetto lo scroll di pagina
+      $(window).scroll(function()
+      {
+        if ($(document).scrollTop() > 1200){
+          // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
+          if ($("#back_to_top").is(":hidden")) {
+              $("#back_to_top").fadeIn(500);
+          }
+   }
+          // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
+          if ($(document).scrollTop() < 1200){
+           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
+           {
+               $("#back_to_top").fadeOut(500);
+           }
+           }
+      });
+
+      // Al click sull'icona, torno ad inizio pagina con movenza fluida
+      $("#back_to_top").click(function()
+      {
+          $("html,body").animate({scrollTop: 500}, 500, function(){});
+
+      });
+  });
+
+
+}
+
+if(resto1!=0){
+
+document.getElementById("divapplicazioni").style.height="300px";
+document.getElementById("bouncefrecciaappcapovolta").style.transform="rotate(360deg)";
+document.getElementById("bouncefrecciaappcapovolta").style.width="20%";
+document.getElementById("bouncefrecciaappcapovolta").style.height="20%";
+document.getElementById("bouncefrecciaappcapovolta").style.marginTop="0px";
+document.getElementById("scoprdimenoapp").innerHTML="";
+document.getElementById("marginepapp").innerHTML="Mostra di più";
+document.getElementById("divapplicazioni").style.opacity="0.8";
+
+$(document).ready(function()
+{$("#back_to_top").hide();
+});
+}
+cont1++;
+}
+
+
+
+
+function frecciaintr(){
+
+  resto2= cont2%2;
+  if(resto2==0){
+
+  document.getElementById("divintranet").style.height="2000px";
+  document.getElementById("bouncefrecciaintrcapovolta").style.transform="rotate(180deg)";
+  document.getElementById("bouncefrecciaintrcapovolta").style.width="5%";
+  document.getElementById("bouncefrecciaintrcapovolta").style.height="5%";
+  document.getElementById("bouncefrecciaintrcapovolta").style.marginTop="1670px";
+  document.getElementById("marginepintr").innerHTML="";
+  document.getElementById("scoprdimenointr").innerHTML="Mostra di meno";
+  document.getElementById("divintranet").style.opacity="1";
+
+var $nuovo2 = jQuery.noConflict();
+$nuovo2(document).ready(function()
+  {
+      // Nascondo l'icona al caricamento della pagina
+      $("#back_to_top").hide();
+
+      // Intercetto lo scroll di pagina
+      $(window).scroll(function()
+      {
+        if ($(document).scrollTop() > 1800){
+          // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
+          if ($("#back_to_top").is(":hidden")) {
+              $("#back_to_top").fadeIn(500);
+          }
+   }
+          // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
+          if ($(document).scrollTop() < 1800){
+           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
+           {
+               $("#back_to_top").fadeOut(500);
+           }
+           }
+      });
+
+      // Al click sull'icona, torno ad inizio pagina con movenza fluida
+      $("#back_to_top").click(function()
+      {
+          $("html,body").animate({scrollTop: 900}, 500, function(){});
+
+      });
+  });
+}
+
+if(resto2!=0){
+
+document.getElementById("divintranet").style.height="300px";
+document.getElementById("bouncefrecciaintrcapovolta").style.transform="rotate(360deg)";
+document.getElementById("bouncefrecciaintrcapovolta").style.width="20%";
+document.getElementById("bouncefrecciaintrcapovolta").style.height="20%";
+document.getElementById("bouncefrecciaintrcapovolta").style.marginTop="0px";
+document.getElementById("scoprdimenointr").innerHTML="";
+document.getElementById("marginepintr").innerHTML="Mostra di più";
+document.getElementById("divintranet").style.opacity="0.8";
+
+$(document).ready(function()
+{$("#back_to_top").hide();
+});
+}
+cont2++;
+}
+
+
+
+
+
+
+
+</script>
+
+<div id="back_to_top"><img src="../img/frecciabacktop.png"></div>
+<br>
+<br>
+<br>
+<br>
