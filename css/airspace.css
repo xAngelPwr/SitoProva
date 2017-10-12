@@ -86,24 +86,46 @@ a:active {
   color: #666;
 }
 
-.ciaooooooo{
-  position: absolute;
-  left: 500px;
-  top: 150px;
-
-}
 /*--
 	Header Start
 --*/
 
 .passaggiofreccia:hover{
-  background-color: #FF4040;
+  background-color: #ff4d4d;
   border-radius: 10px 10px 10px 10px;
 }
 
-.footerhover:hover{
-  color: red;
+
+#coloretutto{
+  color: black;
 }
+
+#colorecomuni{
+  color: black;
+}
+
+#coloreunegestass{
+  color: black;
+}
+
+#colorecamdicomm{
+  color: black;
+}
+
+#coloresanità{
+  color: black;
+}
+
+#coloreagenzreg{
+  color: black;
+}
+
+#colorepac{
+  color: black;
+}
+
+
+
 
 header {
   background: #fff;
@@ -403,6 +425,13 @@ font header .navbar-default .navbar-nav li a:hover {
 	Slider-work Start
 --*/
 
+.footerhover{
+  color: black;
+}
+
+.footerhover:hover{
+  color: red;
+}
 .coloreploghi{
   color: black !important
 }
@@ -480,6 +509,7 @@ iframe{
   margin-top: 30px;
 }
 
+
 .bounce {
  padding-top: 18px;
 }
@@ -511,12 +541,16 @@ iframe{
 .content-section-a {
     padding: 50px 0;
     background-color: #f8f8f8;
+    box-shadow: 0px 0px 1px 0px #666;
+
 }
 
 .content-section-b {
     padding: 50px 0;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0px #666;
 }
 
 .section-heading {
@@ -529,6 +563,13 @@ iframe{
     border-top: 3px solid #e7e7e7;
 }
 
+.paragrafoclienti{
+
+}
+
+.containereffclienti{
+
+}
 #divweb{
   width: 100%;
   height: 300px;
@@ -536,6 +577,7 @@ iframe{
   text-align: center;
   box-shadow: 0px 0px 4px 1px #666;
   opacity: 0.8;
+  position: relative;
 }
 
 #divapplicazioni{
@@ -546,6 +588,7 @@ iframe{
   box-shadow: 0px 0px 4px 1px #666;
   margin-top: 80px;
   opacity: 0.8;
+  position: relative;
 }
 
 #divintranet{
@@ -556,6 +599,7 @@ iframe{
   box-shadow: 0px 0px 4px 1px #666;
   margin-top: 80px;
   opacity: 0.8;
+  position: relative;
 }
 
 
@@ -563,7 +607,7 @@ iframe{
   text-align: center;
   line-height: 150px;
   font-size: 34px;
-
+  color: black; 
 }
 
 #freccagiuservizi{
@@ -611,6 +655,7 @@ iframe{
 
 #marginepweb{
   margin-top: 40px;
+  color: black;
 }
 
 #bouncefrecciawebcapovolta{
@@ -632,6 +677,7 @@ iframe{
 
 #marginepapp{
   margin-top: 40px;
+  color: black;
 }
 
 #bouncefrecciaappcapovolta{
@@ -652,6 +698,7 @@ iframe{
 
 #marginepintr{
   margin-top: 40px;
+  color: black;
 }
 
 #bouncefrecciaintrcapovolta{
@@ -673,19 +720,210 @@ iframe{
 }
 
 #scoprdimenoweb{
-
+  color: black;
 }
 
 #scoprdimenoapp{
-
+  color: black;
 }
 
 #scoprdimenointr{
-
+  color: black;
 }
 
 .titoloservizi{
   font-size: 50px;
+}
+
+.identutto{
+
+}
+
+.idencomuni{
+
+}
+
+.idenunegestass{
+
+}
+
+.idencamdicomm{
+
+}
+
+.idenagenzreg{
+
+}
+
+.idensanità{
+
+}
+
+.idenpac{
+
+}
+
+#triangtuttovuoto{
+
+}
+
+#triangcomunivuoto{
+
+}
+
+#triangunegestassvuoto{
+
+}
+
+#triangcamdicommvuoto{
+
+}
+
+#triangagenzregvuoto{
+
+}
+
+#triangsanitàvuoto{
+
+}
+
+#triangpacvuoto{
+
+}
+
+#triangtutto:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#triangcomuni:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#triangunegestass:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#triangcamdicomm:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#triangagenzreg:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#triangsanità:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#triangpac:before{
+  content: "\f0d7";
+  position: absolute;
+  font-family: 'FontAwesome';
+  bottom: -18px;
+  font-size: 30px;
+  width: 20px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 #back_to_top {
@@ -695,6 +933,103 @@ iframe{
     cursor: pointer;
 }
 
+#back_to_top:hover {
+
+    opacity: 0.7;
+}
+
+#back_to_top1 {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#back_to_top1:hover {
+
+    opacity: 0.7;
+}
+
+#back_to_top2 {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#back_to_top2:hover {
+
+    opacity: 0.7;
+}
+
+#back_to_topvuoto{
+
+}
+
+#back_to_topvuoto1{
+
+}
+
+#back_to_topvuoto2{
+
+}
+
+#idenimgweb{
+
+}
+
+#idenimgapp{
+
+}
+
+#idenimgintr{
+
+}
+
+#idenimgwebvuoto{
+
+}
+
+#idenimgappvuoto{
+
+}
+
+#idenimgintrvuoto{
+
+}
+
+#xuscitaweb{
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#xuscitaweb:hover{
+    opacity: 0.7;
+}
+
+#xuscitaapp{
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#xuscitaapp:hover{
+    opacity: 0.7;
+}
+
+#xuscitaintr{
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#xuscitaintr:hover{
+    opacity: 0.7;
+}
 
 #global-header {
   background: url("../img/clienti.png") no-repeat;
@@ -782,6 +1117,7 @@ iframe{
 #portfolio-work {
   overflow: hidden;
   padding: 0px 0;
+  background-color: white;
 }
 #portfolio-work .block .portfolio-menu {
   padding-bottom: 30px;
@@ -799,11 +1135,9 @@ iframe{
   font-size: 15px;
   line-height: 40px;
   font-weight: 600;
-  color: #333333;
   position: relative;
 }
 #portfolio-work .block .portfolio-menu ul .active {
-  color: #655E7A;
   position: relative;
 }
 #portfolio-work .block .portfolio-menu ul .active:before {
@@ -817,13 +1151,12 @@ iframe{
   right: 0px;
   top: 23px;
   margin: 0 auto;
-  color: #fff;
-  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.9);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  border: 1px solid #999999;
 }
 #portfolio-work .block .portfolio-menu ul li:hover:before {
   content: "\f0d7";
@@ -844,6 +1177,8 @@ iframe{
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+
+
 #portfolio-work .block .portfolio-contant ul li {
   float: left;
   width: 32.22%;

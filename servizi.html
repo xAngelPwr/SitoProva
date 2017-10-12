@@ -5,7 +5,7 @@ permalink: /servizi/
 ---
 
     <!-- Slider Start -->
-
+<a name="ancoraweb"></a>
 <section id="service">
     <div class="container">
         <div class="row">
@@ -20,27 +20,29 @@ permalink: /servizi/
 
 
 <div id="divweb">
+  <img id="xuscitaweb" src="../img/xchiusuraserv3.png" title="Mostra meno">
  <p class="paragrafiservizi"><b>Web</b></p>
  <b><p id="marginepweb">Mostra di più</p></b>
-
+<a name="ancoraapp"></a>
 <a id="linkancoraweb" href="#ancoraweb"><img src="../img/freccia.svg" class="bouncefrecciaweb" id="bouncefrecciawebcapovolta" onclick="frecciaweb()"></a>
 <b><p id="scoprdimenoweb"></p></b>
 </div>
 
 
  <div id="divapplicazioni">
+   <img id="xuscitaapp" src="../img/xchiusuraserv3.png" title="Mostra meno">
   <p class="paragrafiservizi"><b>Applicazioni</b></p>
-  <b><p id="marginepapp">Mostra di più</p></b>
-
+  <b><p id="marginepapp"><b>Mostra di più</b></p></b>
+<a name="ancoraintr"></a>
    <a id="linkancoraapp" href="#ancoraapp"><img src="../img/freccia.svg" class="bouncefrecciaapp" id="bouncefrecciaappcapovolta" onclick="frecciaapp()"></a>
-
   <b><p id="scoprdimenoapp"></p></b>
  </div>
 
 
  <div id="divintranet">
+   <img id="xuscitaintr" src="../img/xchiusuraserv3.png" title="Mostra meno">
   <p class="paragrafiservizi"><b>Intranet</b></p>
-  <b><p id="marginepintr">Mostra di più</p></b>
+  <b><p id="marginepintr"><b>Mostra di più</b></p></b>
    <a id="linkancoraintr" href="#ancoraintr"><img src="../img/freccia.svg" class="bouncefrecciaintr" id="bouncefrecciaintrcapovolta" onclick="frecciaintr()"></a>
    <b><p id="scoprdimenointr"></p></b>
  </div>
@@ -60,12 +62,91 @@ var restointr;
 var contweb = 0;
 var contapp = 0;
 var contintr = 0;
+var flagweb = 0;
+var flagapp = 0;
+var flagintr = 0;
 
-  $(document).ready(function()
-  {$("#back_to_top").hide();
-  });
+$(document).ready(function()
+{$("#xuscitaweb").hide();
+});
+
+$(document).ready(function()
+{$("#xuscitaapp").hide();
+});
+
+$(document).ready(function()
+{$("#xuscitaintr").hide();
+});
 
 function frecciaweb(){
+
+  if(flagapp == 1){
+    document.getElementById("divapplicazioni").style.height="300px";
+    document.getElementById("bouncefrecciaappcapovolta").style.transform="rotate(360deg)";
+    document.getElementById("bouncefrecciaappcapovolta").style.width="20%";
+    document.getElementById("bouncefrecciaappcapovolta").style.height="20%";
+    document.getElementById("bouncefrecciaappcapovolta").style.marginTop="0px";
+    document.getElementById("scoprdimenoapp").innerHTML="";
+    document.getElementById("marginepapp").innerHTML="Mostra di più";
+    document.getElementById("divapplicazioni").style.opacity="0.8";
+
+    $(document).ready(function()
+    {$("#xuscitaapp").hide();
+    });
+
+    flagapp = 0;
+
+    document.getElementById("back_to_top1").id="back_to_topvuoto1";
+    document.getElementById("idenimgapp").src="";
+    $(document).ready(function()
+    {$("#back_to_topvuoto").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto1").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto2").hide();
+    });
+    cont1++;
+  }
+
+  if(flagintr == 1){
+    document.getElementById("divintranet").style.height="300px";
+    document.getElementById("bouncefrecciaintrcapovolta").style.transform="rotate(360deg)";
+    document.getElementById("bouncefrecciaintrcapovolta").style.width="20%";
+    document.getElementById("bouncefrecciaintrcapovolta").style.height="20%";
+    document.getElementById("bouncefrecciaintrcapovolta").style.marginTop="0px";
+    document.getElementById("scoprdimenointr").innerHTML="";
+    document.getElementById("marginepintr").innerHTML="Mostra di più";
+    document.getElementById("divintranet").style.opacity="0.8";
+
+    $(document).ready(function()
+    {$("#xuscitaintr").hide();
+    });
+
+    flagintr = 0;
+
+    document.getElementById("back_to_top2").id="back_to_topvuoto2";
+    document.getElementById("idenimgintr").src="";
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto1").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto2").hide();
+    });
+    cont2++;
+  }
+
+
+  flagweb = 1;
 
   resto = cont%2;
   if(resto==0){
@@ -79,14 +160,56 @@ function frecciaweb(){
   document.getElementById("scoprdimenoweb").innerHTML="Mostra di meno";
   document.getElementById("divweb").style.opacity="1";
 
-var $nuovo = jQuery.noConflict();
-$nuovo(document).ready(function()
+  $(document).ready(function()
+  {$("#xuscitaweb").show();
+  });
+
+  $(document).ready(function(){
+    $("#xuscitaweb").click(function(){
+      document.getElementById("divweb").style.height="300px";
+      document.getElementById("bouncefrecciawebcapovolta").style.transform="rotate(360deg)";
+      document.getElementById("bouncefrecciawebcapovolta").style.width="20%";
+      document.getElementById("bouncefrecciawebcapovolta").style.height="20%";
+      document.getElementById("bouncefrecciawebcapovolta").style.marginTop="0px";
+      document.getElementById("scoprdimenoweb").innerHTML="";
+      document.getElementById("marginepweb").innerHTML="Mostra di più";
+      document.getElementById("divweb").style.opacity="0.8";
+
+
+      $(document).ready(function()
+      {$("#xuscitaweb").hide();
+      });
+
+      flagweb = 0;
+      document.getElementById("back_to_top").id="back_to_topvuoto";
+      document.getElementById("idenimgweb").src="";
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto1").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto2").hide();
+      });
+
+      cont++;
+    });
+});
+
+if(flagweb == 1){document.getElementById("back_to_topvuoto").id="back_to_top"; document.getElementById("idenimgweb").src="../img/frecciabacktop.png";}
+
+
+ $(document).ready(function()
   {
       // Nascondo l'icona al caricamento della pagina
       $("#back_to_top").hide();
 
       // Intercetto lo scroll di pagina
-      $(window).scroll(function()
+    $(window).scroll(function()
       {
         if ($(document).scrollTop() > 600){
           // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
@@ -96,10 +219,9 @@ $nuovo(document).ready(function()
    }
           // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
           if ($(document).scrollTop() < 600){
-           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
-           {
+
                $("#back_to_top").fadeOut(500);
-           }
+
            }
       });
 
@@ -107,7 +229,6 @@ $nuovo(document).ready(function()
       $("#back_to_top").click(function()
       {
           $("html,body").animate({scrollTop: 0}, 500, function(){});
-
       });
   });
 
@@ -124,19 +245,100 @@ document.getElementById("scoprdimenoweb").innerHTML="";
 document.getElementById("marginepweb").innerHTML="Mostra di più";
 document.getElementById("divweb").style.opacity="0.8";
 
+
 $(document).ready(function()
-{$("#back_to_top").hide();
+{$("#xuscitaweb").hide();
+});
+
+flagweb = 0;
+document.getElementById("back_to_top").id="back_to_topvuoto";
+document.getElementById("idenimgweb").src="";
+
+$(document).ready(function()
+{$("#back_to_topvuoto").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto1").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto2").hide();
 });
 }
 cont++;
-
-
 }
-
 
 
 
 function frecciaapp(){
+
+  if(flagweb == 1){
+    document.getElementById("divweb").style.height="300px";
+    document.getElementById("bouncefrecciawebcapovolta").style.transform="rotate(360deg)";
+    document.getElementById("bouncefrecciawebcapovolta").style.width="20%";
+    document.getElementById("bouncefrecciawebcapovolta").style.height="20%";
+    document.getElementById("bouncefrecciawebcapovolta").style.marginTop="0px";
+    document.getElementById("scoprdimenoweb").innerHTML="";
+    document.getElementById("marginepweb").innerHTML="Mostra di più";
+    document.getElementById("divweb").style.opacity="0.8";
+
+    $(document).ready(function()
+    {$("#xuscitaweb").hide();
+    });
+
+    flagweb = 0;
+    document.getElementById("back_to_top").id="back_to_topvuoto";
+    document.getElementById("idenimgweb").src="";
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto1").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto2").hide();
+    });
+    cont++;
+  }
+
+  if(flagintr == 1){
+    document.getElementById("divintranet").style.height="300px";
+    document.getElementById("bouncefrecciaintrcapovolta").style.transform="rotate(360deg)";
+    document.getElementById("bouncefrecciaintrcapovolta").style.width="20%";
+    document.getElementById("bouncefrecciaintrcapovolta").style.height="20%";
+    document.getElementById("bouncefrecciaintrcapovolta").style.marginTop="0px";
+    document.getElementById("scoprdimenointr").innerHTML="";
+    document.getElementById("marginepintr").innerHTML="Mostra di più";
+    document.getElementById("divintranet").style.opacity="0.8";
+
+    $(document).ready(function()
+    {$("#xuscitaintr").hide();
+    });
+
+
+    flagintr = 0;
+
+    document.getElementById("back_to_top2").id="back_to_topvuoto2";
+    document.getElementById("idenimgintr").src="";
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto1").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto2").hide();
+    });
+      cont2++;
+  }
+  flagapp = 1;
 
   resto1= cont1%2;
   if(resto1==0){
@@ -150,32 +352,70 @@ function frecciaapp(){
   document.getElementById("scoprdimenoapp").innerHTML="Mostra di meno";
   document.getElementById("divapplicazioni").style.opacity="1";
 
-var $nuovo1 = jQuery.noConflict();
-$nuovo1(document).ready(function()
+  $(document).ready(function()
+  {$("#xuscitaapp").show();
+  });
+
+  $(document).ready(function(){
+    $("#xuscitaapp").click(function(){
+      document.getElementById("divapplicazioni").style.height="300px";
+      document.getElementById("bouncefrecciaappcapovolta").style.transform="rotate(360deg)";
+      document.getElementById("bouncefrecciaappcapovolta").style.width="20%";
+      document.getElementById("bouncefrecciaappcapovolta").style.height="20%";
+      document.getElementById("bouncefrecciaappcapovolta").style.marginTop="0px";
+      document.getElementById("scoprdimenoapp").innerHTML="";
+      document.getElementById("marginepapp").innerHTML="Mostra di più";
+      document.getElementById("divapplicazioni").style.opacity="0.8";
+
+      $(document).ready(function()
+      {$("#xuscitaapp").hide();
+      });
+
+      flagapp = 0;
+
+      document.getElementById("back_to_top1").id="back_to_topvuoto1";
+      document.getElementById("idenimgapp").src="";
+      $(document).ready(function()
+      {$("#back_to_topvuoto").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto1").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto2").hide();
+      });
+
+      cont1++;
+    });
+});
+  if(flagapp == 1){document.getElementById("back_to_topvuoto1").id="back_to_top1"; document.getElementById("idenimgapp").src="../img/frecciabacktop.png";}
+
+ $(document).ready(function()
   {
       // Nascondo l'icona al caricamento della pagina
-      $("#back_to_top").hide();
+      $("#back_to_top1").hide();
 
       // Intercetto lo scroll di pagina
       $(window).scroll(function()
       {
         if ($(document).scrollTop() > 1200){
           // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
-          if ($("#back_to_top").is(":hidden")) {
-              $("#back_to_top").fadeIn(500);
+          if ($("#back_to_top1").is(":hidden")) {
+              $("#back_to_top1").fadeIn(500);
           }
    }
           // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
           if ($(document).scrollTop() < 1200){
-           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
-           {
-               $("#back_to_top").fadeOut(500);
-           }
+
+               $("#back_to_top1").fadeOut(500);
+
            }
       });
 
       // Al click sull'icona, torno ad inizio pagina con movenza fluida
-      $("#back_to_top").click(function()
+      $("#back_to_top1").click(function()
       {
           $("html,body").animate({scrollTop: 500}, 500, function(){});
 
@@ -197,7 +437,23 @@ document.getElementById("marginepapp").innerHTML="Mostra di più";
 document.getElementById("divapplicazioni").style.opacity="0.8";
 
 $(document).ready(function()
-{$("#back_to_top").hide();
+{$("#xuscitaapp").hide();
+});
+
+flagapp = 0;
+
+document.getElementById("back_to_top1").id="back_to_topvuoto1";
+document.getElementById("idenimgapp").src="";
+$(document).ready(function()
+{$("#back_to_topvuoto").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto1").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto2").hide();
 });
 }
 cont1++;
@@ -208,6 +464,72 @@ cont1++;
 
 function frecciaintr(){
 
+  flagintr = 1;
+
+if(flagweb == 1){document.getElementById("divweb").style.height="300px";
+                 document.getElementById("bouncefrecciawebcapovolta").style.transform="rotate(360deg)";
+                 document.getElementById("bouncefrecciawebcapovolta").style.width="20%";
+                 document.getElementById("bouncefrecciawebcapovolta").style.height="20%";
+                 document.getElementById("bouncefrecciawebcapovolta").style.marginTop="0px";
+                 document.getElementById("scoprdimenoweb").innerHTML="";
+                 document.getElementById("marginepweb").innerHTML="Mostra di più";
+                 document.getElementById("divweb").style.opacity="0.8";
+
+                 $(document).ready(function()
+                 {$("#xuscitaweb").hide();
+                 });
+
+                 flagweb = 0;
+
+                 document.getElementById("back_to_top").id="back_to_topvuoto";
+                 document.getElementById("idenimgweb").src="";
+
+                 $(document).ready(function()
+                 {$("#back_to_topvuoto").hide();
+               });
+
+               $(document).ready(function()
+               {$("#back_to_topvuoto1").hide();
+             });
+
+             $(document).ready(function()
+             {$("#back_to_topvuoto2").hide();
+           });
+          cont++;
+         }
+
+  if(flagapp == 1){
+    document.getElementById("divapplicazioni").style.height="300px";
+    document.getElementById("bouncefrecciaappcapovolta").style.transform="rotate(360deg)";
+    document.getElementById("bouncefrecciaappcapovolta").style.width="20%";
+    document.getElementById("bouncefrecciaappcapovolta").style.height="20%";
+    document.getElementById("bouncefrecciaappcapovolta").style.marginTop="0px";
+    document.getElementById("scoprdimenoapp").innerHTML="";
+    document.getElementById("marginepapp").innerHTML="Mostra di più";
+    document.getElementById("divapplicazioni").style.opacity="0.8";
+
+    $(document).ready(function()
+    {$("#xuscitaapp").hide();
+    });
+
+    flagapp = 0;
+
+    document.getElementById("back_to_top1").id="back_to_topvuoto1";
+    document.getElementById("idenimgapp").src="";
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto1").hide();
+    });
+
+    $(document).ready(function()
+    {$("#back_to_topvuoto2").hide();
+    });
+    cont1++;
+  }
   resto2= cont2%2;
   if(resto2==0){
 
@@ -220,32 +542,72 @@ function frecciaintr(){
   document.getElementById("scoprdimenointr").innerHTML="Mostra di meno";
   document.getElementById("divintranet").style.opacity="1";
 
-var $nuovo2 = jQuery.noConflict();
-$nuovo2(document).ready(function()
+  $(document).ready(function()
+  {$("#xuscitaintr").show();
+  });
+
+  $(document).ready(function(){
+    $("#xuscitaintr").click(function(){
+      document.getElementById("divintranet").style.height="300px";
+      document.getElementById("bouncefrecciaintrcapovolta").style.transform="rotate(360deg)";
+      document.getElementById("bouncefrecciaintrcapovolta").style.width="20%";
+      document.getElementById("bouncefrecciaintrcapovolta").style.height="20%";
+      document.getElementById("bouncefrecciaintrcapovolta").style.marginTop="0px";
+      document.getElementById("scoprdimenointr").innerHTML="";
+      document.getElementById("marginepintr").innerHTML="Mostra di più";
+      document.getElementById("divintranet").style.opacity="0.8";
+
+      $(document).ready(function()
+      {$("#xuscitaintr").hide();
+      });
+
+      flagintr = 0;
+
+      document.getElementById("back_to_top2").id="back_to_topvuoto2";
+      document.getElementById("idenimgintr").src="";
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto1").hide();
+      });
+
+      $(document).ready(function()
+      {$("#back_to_topvuoto2").hide();
+      });
+
+      cont2++;
+    });
+   });
+  if(flagintr == 1){document.getElementById("back_to_topvuoto2").id="back_to_top2"; document.getElementById("idenimgintr").src="../img/frecciabacktop.png";}
+
+
+$(document).ready(function()
   {
       // Nascondo l'icona al caricamento della pagina
-      $("#back_to_top").hide();
+      $("#back_to_top2").hide();
 
       // Intercetto lo scroll di pagina
       $(window).scroll(function()
       {
-        if ($(document).scrollTop() > 1800){
+        if ($(document).scrollTop() > 1400){
           // Se l'evento scroll si verifica, mostro l'icona (invisibile) con effetto dissolvenza
-          if ($("#back_to_top").is(":hidden")) {
-              $("#back_to_top").fadeIn(500);
+          if ($("#back_to_top2").is(":hidden")) {
+              $("#back_to_top2").fadeIn(500);
           }
    }
           // Se si verifica il ritorno ad inizio pagina, nascondo l'icona con effetto dissolvenza
-          if ($(document).scrollTop() < 1800){
-           if ($("body").scrollTop() == 0 && !$("#back_to_top").is(":hidden"))
-           {
-               $("#back_to_top").fadeOut(500);
-           }
+          if ($(document).scrollTop() < 1400){
+
+               $("#back_to_top2").fadeOut(500);
+
            }
       });
 
       // Al click sull'icona, torno ad inizio pagina con movenza fluida
-      $("#back_to_top").click(function()
+      $("#back_to_top2").click(function()
       {
           $("html,body").animate({scrollTop: 900}, 500, function(){});
 
@@ -265,8 +627,26 @@ document.getElementById("marginepintr").innerHTML="Mostra di più";
 document.getElementById("divintranet").style.opacity="0.8";
 
 $(document).ready(function()
-{$("#back_to_top").hide();
+{$("#xuscitaintr").hide();
 });
+
+flagintr = 0;
+
+document.getElementById("back_to_top2").id="back_to_topvuoto2";
+document.getElementById("idenimgintr").src="";
+
+$(document).ready(function()
+{$("#back_to_topvuoto").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto1").hide();
+});
+
+$(document).ready(function()
+{$("#back_to_topvuoto2").hide();
+});
+
 }
 cont2++;
 }
@@ -279,7 +659,9 @@ cont2++;
 
 </script>
 
-<div id="back_to_top"><img src="../img/frecciabacktop.png"></div>
+<div id="back_to_topvuoto"><img id="idenimgweb" src=""></div>
+<div id="back_to_topvuoto1"><img id="idenimgapp" src=""></div>
+<div id="back_to_topvuoto2"><img id="idenimgintr" src=""></div>
 <br>
 <br>
 <br>

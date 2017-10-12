@@ -4,6 +4,7 @@ title: Clienti
 permalink: /clienti/
 ---
 
+<body onload="tutto()">
 <!-- Slider Start -->
 
 <section id="service">
@@ -12,26 +13,29 @@ permalink: /clienti/
               </div>
               <div class="ombradivclienti" align="center">
                 <img src="../img/clienti1.png" class="immagineclienti">
+                 <a name="ancoraclienti"></a>
             </div>
         </div>
     </div>
 </div>
 </section>
 <!-- Portfolio Start -->
+
+
 <section id="portfolio-work">
-<div class="container">
+ <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="block">
           <div class="portfolio-menu">
             <ul>
-                <li class="filter">Tutto</li>
-                <li class="filter">Comuni</li>
-                <li class="filter">Unioni e gestioni associate</li>
-                <li class="filter">Camere di commercio</li>
-                <li class="filter">Sanità</li>
-                <li class="filter">Agenzie regionali</li>
-                <li class="filter">Pac</li>
+                <a href="#ancoraclienti" id="coloretutto" class="hovertutto"><li class="filter" class="identutto" id="triangtuttovuoto" onclick="tutto()">Tutto</li></a>
+                <a href="#ancoraclienti" id="colorecomuni" class="hovercomuni"><li class="filter" class="idencomuni" id="triangcomunivuoto" onclick="comuni()">Comuni</li></a>
+                <a href="#ancoraclienti" id="coloreunegestass" class="hoverunegestass"><li class="filter" id="triangunegestassvuoto" onclick="unegestass()">Unioni e gestioni associate</li></a>
+                <a href="#ancoraclienti" id="colorecamdicomm" class="hovercamdicomm"><li class="filter" id="triangcamdicommvuoto" onclick="camdicomm()">Camere di commercio</li></a>
+                <a href="#ancoraclienti" id="coloresanità" class="hoversanità"><li class="filter" id="triangsanitàvuoto" onclick="sanità()">Sanità</li></a>
+                <a href="#ancoraclienti" id="coloreagenzreg" class="hoveragenzreg"><li class="filter" id="triangagenzregvuoto" onclick="agenzreg()">Agenzie regionali</li></a>
+                <a href="#ancoraclienti" id="colorepac" class="hoverpac"><li class="filter" id="triangpacvuoto" onclick="pac()">Pac</li></a>
             </ul>
           </div>
         </div>
@@ -42,9 +46,54 @@ permalink: /clienti/
 
 <script type="text/javascript">
 
-
+var flagtutto = 0;
+var flagcomuni = 0;
+var flagunegestass = 0;
+var flagcamdicomm = 0;
+var flagsanità = 0;
+var flagagenzreg = 0;
+var flagpac = 0;
 
 function tutto(){
+
+  flagtutto = 1;
+
+  $('#service').addClass('animated fadeIn');
+
+  document.getElementById("coloretutto").style.color="red";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtuttovuoto").id="triangtutto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità== 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac == 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagcomuni = 0;
+  flagunegestass = 0;
+  flagcamdicomm = 0;
+  flagsanità = 0;
+  flagagenzreg = 0;
+  flagpac = 0;
+
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
 
      var container = new Array();
      var row = new Array();
@@ -60,13 +109,14 @@ function tutto(){
      var collg5lgoffset2 = new Array();
      var img = new Array();
      var contentsection = new Array();
-     var boh = new Array();
+     var services = new Array();
      var testobottone = new Array();
      var paragrafo = new Array();
      var testopar = new Array();
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+
 
 for(var a=0; a<4; a++)
 {
@@ -78,7 +128,33 @@ for(var a=0; a<4; a++)
 
 }
 
- //Descrizione breve del progetto
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
   testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
   testopar[1] = document.createTextNode("Secondo testo");
   testopar[2] = document.createTextNode("Terzo testo");
@@ -91,9 +167,7 @@ for(var a=0; a<4; a++)
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
        img[k].alt="";
-       collg5lgoffset2 = document.createElement("div");
-       collg5lgoffset2.className="col-lg-5 col-lg-offset-2 col-sm-6";
-       collg5lgoffset2.appendChild(img[k]);
+       collg5lgoffset2[k].appendChild(img[k]);
 
        divbutton = document.createElement("div");
        button = document.createElement("button");
@@ -124,95 +198,1016 @@ for(var a=0; a<4; a++)
        clearfix = document.createElement("div");
        clearfix.className="clearfix";
 
-       collg5sm6 = document.createElement("div");
-       collg5sm6.className="col-lg-5 col-sm-6";
-       collg5sm6.appendChild(divarray);
-       collg5sm6.appendChild(clearfix);
-       collg5sm6.appendChild(divsectionheading);
-       collg5sm6.appendChild(lead);
-       collg5sm6.appendChild(divbutton);
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
 
        row = document.createElement("div");
        row.className="row";
-       row.appendChild(collg5sm6);
-       row.appendChild(collg5lgoffset2);
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
 
        container = document.createElement("div");
-       container.className="container";
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
        container.appendChild(row);
-
        contentsection[k].appendChild(container);
 
-       boh = document.getElementById("services");
-       boh.appendChild(contentsection[k]);
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
 
 }
+
 }
 
 function comuni(){
 
+  flagcomuni = 1;
 
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="red";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomunivuoto").id="triangcomuni";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm== 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac== 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagtutto = 0;
+  flagunegestass = 0;
+  flagcamdicomm = 0;
+  flagsanità = 0;
+  flagagenzreg = 0;
+  flagpac = 0;
+
+  document.getElementById("services").innerHTML="";
+
+  $('#services').removeClass('animated fadeIn');
+
+       var container = new Array();
+       var row = new Array();
+       var collg5sm6 = new Array();
+       var divhr = new Array();
+       var hr = new Array();
+       var clearfix = new Array();
+       var divsectionheading = new Array();
+       var sectionheading = new Array();
+       var lead = new Array();
+       var divbutton = new Array();
+       var button = new Array();
+       var collg5lgoffset2 = new Array();
+       var img = new Array();
+       var contentsection = new Array();
+       var services = new Array();
+       var testobottone = new Array();
+       var paragrafo = new Array();
+       var testopar = new Array();
+       var testoh2 = new Array();
+       var resto;
+       var cont = 0;
+
+  for(var a=0; a<4; a++)
+  {
+    contentsection[a] = document.createElement("div");
+    resto = cont%2;
+    if(resto==0){contentsection[a].className="content-section-a";}
+    if(resto!=0){contentsection[a].className="content-section-b";}
+    cont++;
+
+  }
+
+  resto = 0;
+  cont = 0;
+
+  for(var a=0; a<4; a++)
+  {
+    collg5sm6[a] = document.createElement("div");
+    resto = cont%2;
+    if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+    if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+    cont++;
+
+  }
+
+  resto = 0;
+  cont = 0;
+
+  for(var a=0; a<4; a++)
+  {
+    collg5lgoffset2[a] = document.createElement("div");
+    resto = cont%2;
+    if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+    if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+    cont++;
+
+  }
+
+   //Descrizione breve progetto
+    testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+    testopar[1] = document.createTextNode("Secondo testo");
+    testopar[2] = document.createTextNode("Terzo testo");
+    testopar[3] = document.createTextNode("Quinto testo");
+
+
+    for(var k=0; k<4; k++)
+    {
+         img[k] = document.createElement("img");
+         img[k].className="img-responsive";
+         img[k].src="../img/wrapper-img.png";
+         img[k].alt="";
+         collg5lgoffset2[k].appendChild(img[k]);
+
+         divbutton = document.createElement("div");
+         button = document.createElement("button");
+         button.className="bottoneclienti";
+         button.type="submit";
+         testobottone[k] = document.createTextNode("Scopri di più");
+         button.appendChild(testobottone[k]);
+         divbutton.appendChild(button);
+
+         lead = document.createElement("div");
+         lead.className="lead";
+         paragrafo = document.createElement("p");
+         paragrafo.appendChild(testopar[k]);
+         lead.appendChild(paragrafo);
+
+         divsectionheading = document.createElement("div");
+         sectionheading = document.createElement("h2");
+         sectionheading.className = "section-heading";
+         testoh2[k] = document.createTextNode("Analisi e orientamento");
+         sectionheading.appendChild(testoh2[k]);
+         divsectionheading.appendChild(sectionheading);
+
+         divarray = document.createElement("div");
+         hr = document.createElement("hr");
+         hr.className="section-heading-spacer";
+         divarray.appendChild(hr);
+
+         clearfix = document.createElement("div");
+         clearfix.className="clearfix";
+
+         collg5sm6[k].appendChild(divarray);
+         collg5sm6[k].appendChild(clearfix);
+         collg5sm6[k].appendChild(divsectionheading);
+         collg5sm6[k].appendChild(lead);
+         collg5sm6[k].appendChild(divbutton);
+
+         row = document.createElement("div");
+         row.className="row";
+         row.appendChild(collg5sm6[k]);
+         row.appendChild(collg5lgoffset2[k]);
+
+         container = document.createElement("div");
+         container.className="container containereffclienti";
+         $('.containereffclienti').addClass('animated fadeIn');
+         container.appendChild(row);
+
+         contentsection[k].appendChild(container);
+
+         services = document.getElementById("services");
+         services.appendChild(contentsection[k]);
+
+  }
 }
 
 function unegestass(){
 
+  flagunegestass = 1;
 
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="red";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestassvuoto").id="triangunegestass";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac == 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagtutto = 0;
+  flagcomuni = 0;
+  flagcamdicomm = 0;
+  flagsanità = 0;
+  flagagenzreg = 0;
+  flagpac = 0;
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var services = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quinto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2[k].appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
+
+       container = document.createElement("div");
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
+
+}
 }
 
 function camdicomm(){
 
+  flagcamdicomm = 1;
 
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="red";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicommvuoto").id="triangcamdicomm";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac == 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagtutto = 0;
+  flagcomuni = 0;
+  flagunegestass = 0;
+  flagsanità = 0;
+  flagagenzreg = 0;
+  flagpac = 0;
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var services = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quinto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2[k].appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
+
+       container = document.createElement("div");
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
+
+}
 }
 
 function sanità(){
 
+  flagsanità = 1;
 
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="red";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanitàvuoto").id="triangsanità";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac == 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagtutto = 0;
+  flagcomuni = 0;
+  flagunegestass = 0;
+  flagcamdicomm = 0;
+  flagagenzreg = 0;
+  flagpac = 0;
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var services = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quinto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2[k].appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
+
+       container = document.createElement("div");
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
+
+}
 }
 
 function agenzreg(){
 
+  flagagenzreg = 1;
 
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="red";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="black";
+
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzregvuoto").id="triangagenzreg";}
+
+  if(flagpac == 1) {document.getElementById("triangpac").id="triangpacvuoto";}
+
+  flagtutto = 0;
+  flagcomuni = 0;
+  flagunegestass = 0;
+  flagcamdicomm = 0;
+  flagsanità = 0;
+  flagpac = 0;
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var services = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quinto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2[k].appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
+
+       container = document.createElement("div");
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
+
+}
 }
 
 function pac(){
 
+  flagpac = 1;
+
+  document.getElementById("coloretutto").style.color="black";
+  document.getElementById("colorecomuni").style.color="black";
+  document.getElementById("coloreunegestass").style.color="black";
+  document.getElementById("colorecamdicomm").style.color="black";
+  document.getElementById("coloreagenzreg").style.color="black";
+  document.getElementById("coloresanità").style.color="black";
+  document.getElementById("colorepac").style.color="red";
+
+  if(flagtutto == 1) {document.getElementById("triangtutto").id="triangtuttovuoto";}
+
+  if(flagcomuni == 1) {document.getElementById("triangcomuni").id="triangcomunivuoto";}
+
+  if(flagunegestass == 1) {document.getElementById("triangunegestass").id="triangunegestassvuoto";}
+
+  if(flagcamdicomm == 1) {document.getElementById("triangcamdicomm").id="triangcamdicommvuoto";}
+
+  if(flagsanità == 1) {document.getElementById("triangsanità").id="triangsanitàvuoto";}
+
+  if(flagagenzreg == 1) {document.getElementById("triangagenzreg").id="triangagenzregvuoto";}
+
+  if(flagpac == 1) {document.getElementById("triangpacvuoto").id="triangpac";}
+
+  flagtutto = 0;
+  flagcomuni = 0;
+  flagunegestass = 0;
+  flagcamdicomm = 0;
+  flagsanità = 0;
+  flagagenzreg = 0;
+
+  document.getElementById("services").innerHTML="";
+
+$('#services').removeClass('animated fadeIn');
+
+     var container = new Array();
+     var row = new Array();
+     var collg5sm6 = new Array();
+     var divhr = new Array();
+     var hr = new Array();
+     var clearfix = new Array();
+     var divsectionheading = new Array();
+     var sectionheading = new Array();
+     var lead = new Array();
+     var divbutton = new Array();
+     var button = new Array();
+     var collg5lgoffset2 = new Array();
+     var img = new Array();
+     var contentsection = new Array();
+     var services = new Array();
+     var testobottone = new Array();
+     var paragrafo = new Array();
+     var testopar = new Array();
+     var testoh2 = new Array();
+     var resto;
+     var cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  contentsection[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){contentsection[a].className="content-section-a";}
+  if(resto!=0){contentsection[a].className="content-section-b";}
+  cont++;
 
 }
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5sm6[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5sm6[a].className="col-lg-5 col-sm-6";}
+  if(resto!=0){collg5sm6[a].className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6";}
+  cont++;
+
+}
+
+resto = 0;
+cont = 0;
+
+for(var a=0; a<4; a++)
+{
+  collg5lgoffset2[a] = document.createElement("div");
+  resto = cont%2;
+  if(resto==0){collg5lgoffset2[a].className="col-lg-5 col-lg-offset-2 col-sm-6";}
+  if(resto!=0){collg5lgoffset2[a].className="col-lg-5 col-sm-pull-6  col-sm-6";}
+  cont++;
+
+}
+
+ //Descrizione breve progetto
+  testopar[0] = document.createTextNode("La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business. Tramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.");
+  testopar[1] = document.createTextNode("Secondo testo");
+  testopar[2] = document.createTextNode("Terzo testo");
+  testopar[3] = document.createTextNode("Quinto testo");
+
+
+  for(var k=0; k<4; k++)
+  {
+       img[k] = document.createElement("img");
+       img[k].className="img-responsive";
+       img[k].src="../img/wrapper-img.png";
+       img[k].alt="";
+       collg5lgoffset2[k].appendChild(img[k]);
+
+       divbutton = document.createElement("div");
+       button = document.createElement("button");
+       button.className="bottoneclienti";
+       button.type="submit";
+       testobottone[k] = document.createTextNode("Scopri di più");
+       button.appendChild(testobottone[k]);
+       divbutton.appendChild(button);
+
+       lead = document.createElement("div");
+       lead.className="lead";
+       paragrafo = document.createElement("p");
+       paragrafo.appendChild(testopar[k]);
+       lead.appendChild(paragrafo);
+
+       divsectionheading = document.createElement("div");
+       sectionheading = document.createElement("h2");
+       sectionheading.className = "section-heading";
+       testoh2[k] = document.createTextNode("Analisi e orientamento");
+       sectionheading.appendChild(testoh2[k]);
+       divsectionheading.appendChild(sectionheading);
+
+       divarray = document.createElement("div");
+       hr = document.createElement("hr");
+       hr.className="section-heading-spacer";
+       divarray.appendChild(hr);
+
+       clearfix = document.createElement("div");
+       clearfix.className="clearfix";
+
+       collg5sm6[k].appendChild(divarray);
+       collg5sm6[k].appendChild(clearfix);
+       collg5sm6[k].appendChild(divsectionheading);
+       collg5sm6[k].appendChild(lead);
+       collg5sm6[k].appendChild(divbutton);
+
+       row = document.createElement("div");
+       row.className="row";
+       row.appendChild(collg5sm6[k]);
+       row.appendChild(collg5lgoffset2[k]);
+
+       container = document.createElement("div");
+       container.className="container containereffclienti";
+       $('.containereffclienti').addClass('animated fadeIn');
+       container.appendChild(row);
+
+       contentsection[k].appendChild(container);
+
+       services = document.getElementById("services");
+       services.appendChild(contentsection[k]);
+
+}
+}
+
 </script>
 
 <section id="services">
-    <!-- Page Content -->
-
-
-            <div class="content-section-a">
-
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-lg-5 col-sm-6">
-                          <div>
-                            <hr class="section-heading-spacer">
-                          </div>
-                            <div class="clearfix"></div>
-                            <div>
-                            <h2 class="section-heading">Analisi e orientamento</h2></div>
-                             <div class="lead"><p>La Fase di Analisi e orientamento ha l’obiettivo di fotografare la vostra situazione di partenza, come presenza online, e definire un percorso di miglioramento in base ai vostri obiettivi di business.
-                                                  ramite dialoghi, interviste, attività di analisi e di sintesi, vi restituiremo una migliore consapevolezza della vostra posizione in Rete, una maggior focalizzazione sugli obiettivi reali e una definizione del percorso più adeguato per aumentare le vostre performance.</p>
-                             </div>
-                             <div>
-                             <button class="bottoneclienti" type="submit">Scopri di più</button>
-                           </div>
-                        </div>
-                        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                            <img  class="img-responsive" src="../img/wrapper-img.png" alt="" class="bordo">
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container -->
-
-            </div>
-            <!-- /.content-section-a -->
 
 
 
@@ -221,5 +1216,7 @@ function pac(){
 
 
 
-        <button onclick="tutto()"></button>
+
+
     </section>
+</body>
