@@ -1,0 +1,93 @@
+---
+layout: page
+title: Camere di commercio
+permalink: /Cameredicommercio/
+---
+
+<body onload="animatedFadeIn()">
+<!-- Slider Start -->
+
+<script type="text/javascript">
+
+function animatedFadeIn(){
+  $('#service').addClass('animated fadeIn');
+  $('#services').addClass('animated fadeIn');
+}
+
+</script>
+
+<section id="service">
+              <div class="spazdivcontclienti">
+                <p><h1>I nostri clienti la nostra forza</h1></p>
+              </div>
+              <div class="ombradivclienti" align="center">
+                <img src="../img/clienti1.png" class="immagineclienti">
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Portfolio Start -->
+<a name="ancoraclienti" class="ancoraclienti"></a>
+<div class="spazioimmclienti">
+<section id="portfolio-work">
+ <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+              <a href="{{site.baseurl}}/clienti#ancoraclienti" id="coloretutto" class="hovertutto"><li class="filter" class="identutto" onclick="tutto()">Tutto</li></a>
+              <a href="{{site.baseurl}}/Comuni#ancoraclienti" id="colorecomuni" class="hovercomuni"><li class="filter" class="idencomuni" onclick="comuni()">Comuni</li></a>
+              <a href="{{site.baseurl}}/Unioniegestioniass#ancoraclienti" id="coloreunegestass" class="hoverunegestass"><li class="filter" onclick="unegestass()">Unioni e gestioni associate</li></a>
+              <a href="{{site.baseurl}}/Cameredicommercio#ancoraclienti" id="colorecamdicommpagcorr" class="hovercamdicomm"><li class="filter" id="triangcamdicomm" onclick="camdicomm()">Camere di commercio</li></a>
+              <a href="{{site.baseurl}}/Sanità#ancoraclienti" id="coloresanità" class="hoversanità"><li class="filter"  onclick="sanità()">Sanità</li></a>
+              <a href="{{site.baseurl}}/Agenzieregionali#ancoraclienti" id="coloreagenzreg" class="hoveragenzreg"><li class="filter" onclick="agenzreg()">Agenzie regionali</li></a>
+              <a href="{{site.baseurl}}/Pac#ancoraclienti" id="colorepac" class="hoverpac"><li class="filter" onclick="pac()">Pac</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+</div>
+<section id="services">
+
+
+
+{% for Cameredicommercio in site.categories.Cameredicommercio %}
+ <div class="content-section-a">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">{{Cameredicommercio.title}}</h2>
+                         <div class="lead"><p>{{Cameredicommercio.content}}</p>
+                         </div>
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive" src="{{site.baseurl}}/img/{{Cameredicommercio.image}}" alt="" >
+                    </div>
+                    <div>
+                      <button type="submit" class="bottoneclienti">Scopri di più</button>
+                </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+{% endfor %}
+
+
+
+    </section>
+</body>

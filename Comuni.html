@@ -1,0 +1,92 @@
+---
+layout: page
+title: Comuni
+permalink: /Comuni/
+---
+
+<body onload="animatedFadeIn()">
+<!-- Slider Start -->
+
+<script type="text/javascript">
+
+function animatedFadeIn(){
+  $('#service').addClass('animated fadeIn');
+  $('#services').addClass('animated fadeIn');
+}
+
+</script>
+
+<section id="service">
+              <div class="spazdivcontclienti">
+                <p><h1>I nostri clienti la nostra forza</h1></p>
+              </div>
+              <div class="ombradivclienti" align="center">
+                <img src="../img/clienti1.png" class="immagineclienti">
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Portfolio Start -->
+<a name="ancoraclienti" class="ancoraclienti"></a>
+<div class="spazioimmclienti">
+<section id="portfolio-work">
+ <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+              <a href="{{site.baseurl}}/clienti#ancoraclienti" id="coloretutto" class="hovertutto"><li class="filter" class="identutto" onclick="tutto()">Tutto</li></a>
+              <a href="{{site.baseurl}}/Comuni#ancoraclienti" id="colorecomunipagcorr" class="hovercomuni"><li class="filter" class="idencomuni" id="triangcomuni" onclick="comuni()">Comuni</li></a>
+              <a href="{{site.baseurl}}/Unioniegestioniass#ancoraclienti" id="coloreunegestass" class="hoverunegestass"><li class="filter" onclick="unegestass()">Unioni e gestioni associate</li></a>
+              <a href="{{site.baseurl}}/Cameredicommercio#ancoraclienti" id="colorecamdicomm" class="hovercamdicomm"><li class="filter" onclick="camdicomm()">Camere di commercio</li></a>
+              <a href="{{site.baseurl}}/Sanità#ancoraclienti" id="coloresanità" class="hoversanità"><li class="filter" onclick="sanità()">Sanità</li></a>
+              <a href="{{site.baseurl}}/Agenzieregionali#ancoraclienti" id="coloreagenzreg" class="hoveragenzreg"><li class="filter" onclick="agenzreg()">Agenzie regionali</li></a>
+              <a href="{{site.baseurl}}/Pac#ancoraclienti" id="colorepac" class="hoverpac"><li class="filter" onclick="pac()">Pac</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+</div>
+<section id="services">
+
+
+{% for Comuni in site.categories.Comuni %}
+ <div class="content-section-a">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">{{Comuni.title}}</h2>
+                         <div class="lead"><p>{{Comuni.content}}</p>
+                         </div>
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive" src="{{site.baseurl}}/img/{{Comuni.image}}" alt="" >
+                    </div>
+                    <div>
+                      <button type="submit" class="bottoneclienti">Scopri di più</button>
+                </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+
+
+
+{% endfor %}
+
+
+    </section>
+</body>

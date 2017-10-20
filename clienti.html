@@ -13,15 +13,15 @@ permalink: /clienti/
               </div>
               <div class="ombradivclienti" align="center">
                 <img src="../img/clienti1.png" class="immagineclienti">
-                 <a name="ancoraclienti"></a>
+
             </div>
         </div>
     </div>
 </div>
 </section>
 <!-- Portfolio Start -->
-
-
+<a name="ancoraclienti" class="ancoraclienti"></a>
+<div class="spazioimmclienti">
 <section id="portfolio-work">
  <div class="container">
     <div class="row">
@@ -29,13 +29,13 @@ permalink: /clienti/
         <div class="block">
           <div class="portfolio-menu">
             <ul>
-                <a href="#ancoraclienti" id="coloretutto" class="hovertutto"><li class="filter" class="identutto" id="triangtuttovuoto" onclick="tutto()">Tutto</li></a>
-                <a href="#ancoraclienti" id="colorecomuni" class="hovercomuni"><li class="filter" class="idencomuni" id="triangcomunivuoto" onclick="comuni()">Comuni</li></a>
-                <a href="#ancoraclienti" id="coloreunegestass" class="hoverunegestass"><li class="filter" id="triangunegestassvuoto" onclick="unegestass()">Unioni e gestioni associate</li></a>
-                <a href="#ancoraclienti" id="colorecamdicomm" class="hovercamdicomm"><li class="filter" id="triangcamdicommvuoto" onclick="camdicomm()">Camere di commercio</li></a>
-                <a href="#ancoraclienti" id="coloresanità" class="hoversanità"><li class="filter" id="triangsanitàvuoto" onclick="sanità()">Sanità</li></a>
-                <a href="#ancoraclienti" id="coloreagenzreg" class="hoveragenzreg"><li class="filter" id="triangagenzregvuoto" onclick="agenzreg()">Agenzie regionali</li></a>
-                <a href="#ancoraclienti" id="colorepac" class="hoverpac"><li class="filter" id="triangpacvuoto" onclick="pac()">Pac</li></a>
+              <a href="{{site.baseurl}}/clienti#ancoraclienti" id="coloretuttopagcorr" class="hovertutto"><li class="filter" class="identutto" id="triangtutto" onclick="tutto()">Tutto</li></a>
+              <a href="{{site.baseurl}}/Comuni#ancoraclienti" id="colorecomuni" class="hovercomuni"><li class="filter" class="idencomuni" onclick="comuni()">Comuni</li></a>
+              <a href="{{site.baseurl}}/Unioniegestioniass#ancoraclienti" id="coloreunegestass" class="hoverunegestass"><li class="filter" onclick="unegestass()">Unioni e gestioni associate</li></a>
+              <a href="{{site.baseurl}}/Cameredicommercio#ancoraclienti" id="colorecamdicomm" class="hovercamdicomm"><li class="filter" onclick="camdicomm()">Camere di commercio</li></a>
+              <a href="{{site.baseurl}}/Sanità#ancoraclienti" id="coloresanità" class="hoversanità"><li class="filter" onclick="sanità()">Sanità</li></a>
+              <a href="{{site.baseurl}}/Agenzieregionali#ancoraclienti" id="coloreagenzreg" class="hoveragenzreg"><li class="filter" onclick="agenzreg()">Agenzie regionali</li></a>
+              <a href="{{site.baseurl}}/Pac#ancoraclienti" id="colorepac" class="hoverpac"><li class="filter" onclick="pac()">Pac</li></a>
             </ul>
           </div>
         </div>
@@ -43,19 +43,23 @@ permalink: /clienti/
     </div>
 </div>
 </section>
+</div>
 
 <script type="text/javascript">
 
-var flagtutto = 0;
+/*var flagtutto = 0;
 var flagcomuni = 0;
 var flagunegestass = 0;
 var flagcamdicomm = 0;
 var flagsanità = 0;
 var flagagenzreg = 0;
-var flagpac = 0;
+var flagpac = 0;*/
 
 function tutto(){
 
+ $('#service').addClass('animated fadeIn');
+ $('#services').addClass('animated fadeIn');
+/*
   flagtutto = 1;
 
   $('#service').addClass('animated fadeIn');
@@ -116,7 +120,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
-
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -163,6 +169,14 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+       divbuttonresp = document.createElement("div");
+       buttonresp = document.createElement("button");
+       buttonresp.className="bottoneclientiresp";
+       buttonresp.type="submit";
+       testobottoneresp[k] = document.createTextNode("Scopri di più");
+       buttonresp.appendChild(testobottoneresp[k]);
+       divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -214,16 +228,18 @@ for(var a=0; a<4; a++)
        $('.containereffclienti').addClass('animated fadeIn');
        container.appendChild(row);
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
-
+*/
 }
 
 function comuni(){
 
+$('#service').addClass('animated fadeIn');
+/*
   flagcomuni = 1;
 
   document.getElementById("coloretutto").style.color="black";
@@ -281,6 +297,9 @@ function comuni(){
        var testoh2 = new Array();
        var resto;
        var cont = 0;
+       var divbuttonresp = new Array();
+       var buttonresp = new Array();
+       var testobottoneresp = new Array();
 
   for(var a=0; a<4; a++)
   {
@@ -327,6 +346,15 @@ function comuni(){
 
     for(var k=0; k<4; k++)
     {
+
+          divbuttonresp = document.createElement("div");
+          buttonresp = document.createElement("button");
+          buttonresp.className="bottoneclientiresp";
+          buttonresp.type="submit";
+          testobottoneresp[k] = document.createTextNode("Scopri di più");
+          buttonresp.appendChild(testobottoneresp[k]);
+          divbuttonresp.appendChild(buttonresp);
+
          img[k] = document.createElement("img");
          img[k].className="img-responsive";
          img[k].src="../img/wrapper-img.png";
@@ -379,15 +407,18 @@ function comuni(){
          container.appendChild(row);
 
          contentsection[k].appendChild(container);
-
+         contentsection[k].appendChild(divbuttonresp);
          services = document.getElementById("services");
          services.appendChild(contentsection[k]);
 
   }
+  */
 }
 
 function unegestass(){
 
+  $('#service').addClass('animated fadeIn');
+/*
   flagunegestass = 1;
 
   document.getElementById("coloretutto").style.color="black";
@@ -445,6 +476,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -491,6 +525,15 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+
+        divbuttonresp = document.createElement("div");
+        buttonresp = document.createElement("button");
+        buttonresp.className="bottoneclientiresp";
+        buttonresp.type="submit";
+        testobottoneresp[k] = document.createTextNode("Scopri di più");
+        buttonresp.appendChild(testobottoneresp[k]);
+        divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -543,15 +586,18 @@ for(var a=0; a<4; a++)
        container.appendChild(row);
 
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
+*/
 }
 
 function camdicomm(){
 
+  $('#service').addClass('animated fadeIn');
+/*
   flagcamdicomm = 1;
 
   document.getElementById("coloretutto").style.color="black";
@@ -609,6 +655,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -655,6 +704,15 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+
+        divbuttonresp = document.createElement("div");
+        buttonresp = document.createElement("button");
+        buttonresp.className="bottoneclientiresp";
+        buttonresp.type="submit";
+        testobottoneresp[k] = document.createTextNode("Scopri di più");
+        buttonresp.appendChild(testobottoneresp[k]);
+        divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -707,15 +765,18 @@ for(var a=0; a<4; a++)
        container.appendChild(row);
 
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
+*/
 }
 
 function sanità(){
 
+  $('#service').addClass('animated fadeIn');
+/*
   flagsanità = 1;
 
   document.getElementById("coloretutto").style.color="black";
@@ -773,6 +834,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -819,6 +883,15 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+
+        divbuttonresp = document.createElement("div");
+        buttonresp = document.createElement("button");
+        buttonresp.className="bottoneclientiresp";
+        buttonresp.type="submit";
+        testobottoneresp[k] = document.createTextNode("Scopri di più");
+        buttonresp.appendChild(testobottoneresp[k]);
+        divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -871,16 +944,18 @@ for(var a=0; a<4; a++)
        container.appendChild(row);
 
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
+*/
 }
 
 function agenzreg(){
 
-  flagagenzreg = 1;
+  $('#service').addClass('animated fadeIn');
+  /*flagagenzreg = 1;
 
   document.getElementById("coloretutto").style.color="black";
   document.getElementById("colorecomuni").style.color="black";
@@ -937,6 +1012,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -983,6 +1061,15 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+
+        divbuttonresp = document.createElement("div");
+        buttonresp = document.createElement("button");
+        buttonresp.className="bottoneclientiresp";
+        buttonresp.type="submit";
+        testobottoneresp[k] = document.createTextNode("Scopri di più");
+        buttonresp.appendChild(testobottoneresp[k]);
+        divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -1035,16 +1122,18 @@ for(var a=0; a<4; a++)
        container.appendChild(row);
 
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
+*/
 }
 
 function pac(){
 
-  flagpac = 1;
+  $('#service').addClass('animated fadeIn');
+  /*flagpac = 1;
 
   document.getElementById("coloretutto").style.color="black";
   document.getElementById("colorecomuni").style.color="black";
@@ -1100,6 +1189,9 @@ $('#services').removeClass('animated fadeIn');
      var testoh2 = new Array();
      var resto;
      var cont = 0;
+     var divbuttonresp = new Array();
+     var buttonresp = new Array();
+     var testobottoneresp = new Array();
 
 for(var a=0; a<4; a++)
 {
@@ -1146,6 +1238,15 @@ for(var a=0; a<4; a++)
 
   for(var k=0; k<4; k++)
   {
+
+        divbuttonresp = document.createElement("div");
+        buttonresp = document.createElement("button");
+        buttonresp.className="bottoneclientiresp";
+        buttonresp.type="submit";
+        testobottoneresp[k] = document.createTextNode("Scopri di più");
+        buttonresp.appendChild(testobottoneresp[k]);
+        divbuttonresp.appendChild(buttonresp);
+
        img[k] = document.createElement("img");
        img[k].className="img-responsive";
        img[k].src="../img/wrapper-img.png";
@@ -1198,11 +1299,12 @@ for(var a=0; a<4; a++)
        container.appendChild(row);
 
        contentsection[k].appendChild(container);
-
+       contentsection[k].appendChild(divbuttonresp);
        services = document.getElementById("services");
        services.appendChild(contentsection[k]);
 
 }
+*/
 }
 
 </script>
@@ -1210,12 +1312,36 @@ for(var a=0; a<4; a++)
 <section id="services">
 
 
+{% for item in site.posts %}
+ <div class="content-section-a">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">{{item.title}}</h2>
+                         <div class="lead"><p>{{item.content}}</p>
+                         </div>
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive" src="{{site.baseurl}}/img/{{item.image}}" alt="" >
+                    </div>
+                    <div class="bottonecentrato">
+                      <button type="submit" class="bottoneclienti">Scopri di più</button>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+</div>
 
 
 
-
-
-
+{% endfor %}
 
 
     </section>
